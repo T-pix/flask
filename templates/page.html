@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <head>
+    <meta name="viewport" content="width=devide-width,initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Webpage - {% block title %}{% endblock %}</title>
+    {% block head %}
+    {% endblock %}
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/bootstrap.min.css')}}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css')}}">    <link rel="stylesheet" href="{{ url_for('static',filename='css/responsive.css')}}">
+  <link rel="stylesheet" href="{{ url_for('static',filename='css/jquery.mCustomScrollbar.min.css')}}">
+  <link rel="stylesheet" href="{{ url_for('static',filename='css/owl.carousel.min.css')}}">
+  <link rel="stylesheet" href="{{ url_for('static',filename='css/owl.theme.default.min.css')}}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+
+    </head>
+  <body>
+    {% include "snip/header.html"%}
+    <div class="row">
+        <div class="col-s-9">
+            {% block content %}{% endblock %}
+        </div>
+
+    </div>
+
+    <div id="footer">
+        {% include "snip/footer.html"%}
+    </div>
+  </body>
+</html>
